@@ -25,4 +25,24 @@ fn main() {
     //edditing an array iniated with same value
     let mut array2: [i32;500] = [0;500];
     modify(&mut array2);
+
+    println!("{:?}",array2);
+
+    // Rust slices (on heap)
+    let a = [10,20,30,40];
+    analyze_array(&a);
+    
+    //Rust vectors
+    let mut vect: Vec<i32> = Vec::new();
+
+    vect.push(1);
+    vect.push(2);
+    vect.push(3);
+    vect.push(4);
+
+    //rust vector predefined using macro
+    let mut vect2 = vec![7,8,9,10];
+    vect2.pop();
+    analyze_array(&vect2);
+
 }
